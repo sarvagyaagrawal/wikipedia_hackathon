@@ -36,7 +36,6 @@ matplotlib-inline==0.1.6
 multidict==6.0.4
 murmurhash==1.0.9
 nest-asyncio==1.5.6
-numpy==1.24.2
 openai==0.26.5
 packaging==23.0
 pandas==1.5.3
