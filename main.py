@@ -3,12 +3,21 @@ from typing import Union
 from fastapi import FastAPI
 
 from final_script_wiki import *
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+origins = [
+    "https://wikihack.onrender.com",
+]
 
-
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 @app.get("/summary_similar_content/{query_str_url}")
 def read_item(query_str_url: str):
     query_str=extract_text_from_url(query_str_url)
