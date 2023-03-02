@@ -9,6 +9,7 @@ app = FastAPI()
 
 origins = [
     "https://wikihack.onrender.com",
+    "https://en.wikipedia.org"
 ]
 
 app.add_middleware(
